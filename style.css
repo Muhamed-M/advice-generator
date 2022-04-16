@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;800&display=swap');
+
+/* Variables */
+:root {
+    /* colors*/
+    --light-cyan: #cee3e9;
+    --neon-green: #52ffa8;
+    --grayish-blue: #4e5d73;
+    --dark-grayish-blue: #323a49;
+    --dark-blue: #1f2632;
+
+    /* fonts */
+    --manrope: 'Manrope', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: var(--dark-blue);
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    width: 90%;
+    min-height: 360px;
+    padding: 1.5rem .75rem 3rem;
+    background-color: var(--dark-grayish-blue);
+    font-family: var(--manrope);
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px rgba(255, 255, 255, 0.09);
+}
+
+#box__heading {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--neon-green);
+}
+
+#advice {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--light-cyan);
+}
+
+.dice {
+    display: inline-grid;
+    place-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1.7rem;
+    padding: 1rem;
+    background-color: var(--neon-green);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dice:hover {
+    box-shadow: 6px 6px 20px rgba(82, 255, 168, 0.5),
+    -6px -6px 20px rgba(82, 255, 168, 0.5);
+}
+
+@media screen and (min-width: 576px) {
+    .box {
+        max-width: 600px;
+        width: 60%;
+    }
+}
